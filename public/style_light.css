@@ -1,0 +1,713 @@
+/* geral da pagina */
+body, html{
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco);
+    color: var(--roxo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x:hidden;
+}
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--shadowCali);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+}
+.logo img{
+    width: 80px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav a {
+    position: relative;
+    color: var(--roxo_claro);
+    margin: 0rem 1.3rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: var(--roxo);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+nav a:hover {
+    color: var(--roxo);
+}
+nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+header button{
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    font-size: 1rem;
+    font-weight: 700;
+}
+header button:hover{
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
+
+/* Pagina Home */
+.section-1{
+    padding: 30px;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.text{
+    width: 400px;
+}
+.text h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.text h1 span{
+    font-size: 2.6rem;
+}
+#typing {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 48px;
+    border-right: 2px solid var(--roxo);
+    display: inline-block;
+  }
+.text p{
+    width: 300px;
+}
+.section-1 button{
+    background-color: var(--roxo);
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 180px;
+    margin-top: 40px;
+}
+.contato{
+    display: none;
+}
+.section-1 button:hover{
+    background-color: var(--branco);
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+}
+.section-1 img{
+    width: 400px;
+}
+
+.section-2{
+    padding: 30px;
+    margin: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.texts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.texts p{
+    text-align: center;
+    max-width: 330px;
+    margin: 30px;
+}
+
+
+/* Pagina de Projetos */
+.section-5{
+    padding: 30px;
+    margin: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.produto-card{
+    background: var(--roxo);
+    border-radius: 12px;
+    margin: 30px;
+    width: 330px;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+.produto-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.produto-card .info{
+    padding: 15px;
+    color: var(--branco);
+}
+.produto-card h3{
+    margin-top: -6px;
+    margin-bottom: 10px;
+    color: var(--branco);
+}
+.condicao{
+    font-size: 14px;
+    color: var(--branco);
+}
+.descricao{
+    font-size: 13px;
+    color: var(--branco);
+}
+.preco{
+    display: block;
+    margin: 10px 0;
+}
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--branco);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+.section-produtos {
+    padding: 60px 20px;
+}
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.filtros button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #2a2a2a;
+    cursor: pointer;
+}
+.filtros .active {
+    background: var(--roxo_claro);
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin-top: 30px;
+}
+.section-5 button{
+    background-color: var(--branco);
+    color: var(--roxo);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 130px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.section-5 button a{
+    color: var(--roxo);
+}
+.section-5 button:hover {
+    background-color: var(--roxo);
+    border: 2px solid var(--branco);
+    color: var(--branco);
+}
+.section-5 button:hover a{
+    color: var(--branco);
+}
+.buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shadowCali);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.modal {
+    background: var(--roxo);
+    color: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    width: 50%;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease;
+}
+.modal button{
+    background-color: var(--branco);
+    color: var(--roxo);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 130px;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.modal button:hover {
+    background-color: var(--roxo);
+    border: 2px solid var(--branco);
+    color: var(--branco);
+}
+.modal.closing {
+    animation: fadeOut 0.3s ease forwards;
+}
+.modal img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.modal-content {
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+.btn_produtos{
+    background-color: var(--roxo);
+    color: var(--branco);
+    height: 60px;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 120px;
+    margin-top: 40px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.btn_produtos:hover{
+    transition: 0.5s ease-in-out;
+    background-color: var(--branco);
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+}
+.link-button {
+    background-color: var(--branco);
+    color: var(--roxo);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 130px;
+    padding: 9px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+.link-button:hover {
+    transition: 0.5s ease-in-out;
+    background-color: var(--roxo);
+    border: 2px solid var(--branco);
+    color: var(--branco);
+}
+
+
+/* Pagina Contatos */
+.section-6{
+    margin-top: 100px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.section-6 img{
+    width: 300px;
+}
+form, .form{
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form h2{
+    margin: 0px;
+    text-wrap: inherit;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
+.input{
+    background-color: var(--branco);
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    padding: 5px;
+    margin: 5px;
+    margin-top: -15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.5s ease-in-out;
+}
+.input:hover{
+    background-color: var(--roxo);
+    color: var(--branco);
+    transition: 0.5s ease-in-out;
+}
+.input:focus{
+    outline: none;
+    background-color: var(--branco);
+    color: var(--roxo);
+    transition: 0.5s ease-in-out;
+}
+.button_form{
+    border: 1px solid var(--roxo);
+    color: var(--roxo);
+    background-color: var(--branco);
+    border-radius: 5px;
+    padding: 5px;
+    width: 97%;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.5s ease-in-out;
+}
+.button_form:hover{
+    background-color: var(--roxo);
+    color: var(--branco);
+    transition: 0.5s ease-in-out;
+}
+.botao_wtts_email{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.botao_wtts_email_toggle{
+    width: 200px;
+    height: 40px;
+    border: 2px solid var(--roxo);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+.botao_wtts_email_toggle-circle{
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    border-radius: 7px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transform: translateX(0);
+    transition: 0.5s ease-in-out, background 0.3s ease;
+    background: linear-gradient(135deg, var(--roxo), var(--branco));
+}
+.botao_wtts_email_toggle.left .botao_wtts_email_toggle-circle{
+    transform: translateX(0);
+}
+.botao_wtts_email_toggle.right .botao_wtts_email_toggle-circle{
+    transform: translateX(100%);
+}
+.botao_wtts_email_toggle-text{
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    font-weight: bold;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+.form-container {
+    position: relative;
+}
+.form-content {
+    animation: fadeSlide 0.4s ease;
+}
+
+.section-7{
+    padding: 30px;
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    position: relative;
+}
+.redes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin-top: 30px;
+}
+.rede{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 40px;
+}
+.rede img{
+    width: 90px;
+    background-color: var(--branco);
+    padding: 5px;
+    transition: all 0.5s linear;
+}
+.text_rede{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.4s ease-in-out;
+    width: 150px;
+    padding: 10px;
+    border: 1px solid var(--roxo);
+    background: var(--shadowCali);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border-radius: 10px;
+    color: var(--roxo);
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, 45px);
+    text-align: center;
+    z-index: 1;
+}
+.rede:hover .text_rede{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 40px);
+}
+.rede:hover img{
+    background-color: var(--branco);
+    opacity: 0.5;
+}
+
+
+/* Botão de troca de tema */
+.tema{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 1100;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid var(--roxo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco);
+    border-radius: 25px;
+}
+.tema:hover{
+    width: 55px;
+    height: 55px;
+}
+.tema img{
+    weight: 40px;
+    height: 40px;
+}
+
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+    background: var(--roxo_claro);
+    transition: all 0.5s linear;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--roxo);
+    transition: all 0.5s linear;
+}
+
+
+/* Footer */
+footer{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: var(--roxo);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: var(--branco);
+}
+footer .logoFooter{
+    width: 100px;
+}
+
+.wave{
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/waveBlack.png);
+    background-size: 1000px 100px;
+    filter: blur(4px);
+}
+.wave.wave1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+}
+.wave.wave2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+}
+.wave.wave3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+}
+.wave.wave4{
+    animation: wave 15s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+}
+
+/* configuração das bolhas de blur no fundo da pagina */
+.blur-fundo-1{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: var(--roxo);
+    filter: blur(30px);
+    right: 100px;
+    bottom: 100px;
+}
+.blur-fundo-2{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-color: var(--roxo);
+    filter: blur(30px);
+    left: 100px;
+    top: 100px;
+}
+
+
+/* Animação do Modal de produtos aparecendo e sumindo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+}
+/* Animação De wtts e email trocando */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Animação das ondas do Footer */
+@keyframes wave {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes wave2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
