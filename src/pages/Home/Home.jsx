@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import ProjectCard from "../../components/ProjectCard/ProjectCard"
 import { produtos } from "../../data/produtos"
-import divulgacao from '../../assets/main/produtos divulgacao/z flip 5.png'
+import divulgacao from '../../assets/main/produtos divulgacao/z-flip-5.png'
 
 function Home() {
   const navigate = useNavigate()

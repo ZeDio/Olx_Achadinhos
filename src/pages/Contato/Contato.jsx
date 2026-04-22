@@ -2,9 +2,9 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Watch from '../../assets/main/produtos divulgacao/samsung watch.png'
+import Watch from '../../assets/main/produtos divulgacao/samsung-watch.png'
 import instagram from '../../assets/main/redes/instagram.png'
-import site from '../../assets/logo/logo black.svg'
+import site from '../../assets/logo/logo-roxa.svg'
 
 function Contato() {
   const form = useRef()
