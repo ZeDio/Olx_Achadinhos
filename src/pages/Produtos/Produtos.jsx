@@ -3,16 +3,19 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard"
 import { produtos } from "../../data/produtos"
 
 function Produtos() {
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState("todos")
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState("Todos")
   const [produtoSelecionado, setProdutoSelecionado] = useState(null)
   const [closing, setClosing] = useState(false)
 
-  const categorias = ["todos", "celular", "notebook", "tablets", "watch"]
+  const categorias = ["Todos", "Celulares", "Notebooks", "Tablets", "SmartWatchs"]
 
   const produtosFiltrados =
-    categoriaSelecionada === "todos"
+    categoriaSelecionada === "Todos"
       ? produtos
       : produtos.filter((p) => p.categoria === categoriaSelecionada)
+
+  const disponiveis = produtosFiltrados.filter(p => p.estado === "disponivel")
+  const indisponiveis = produtosFiltrados.filter(p => p.estado !== "disponivel")
 
   const handleOpen = (produto) => {
     setProdutoSelecionado(produto)
@@ -32,7 +35,7 @@ function Produtos() {
       <section className="section-5 hidden">
         <div className="blur-fundo-2"></div>
 
-        <h2>Produtos disponíveis</h2>
+        <h2>Produtos</h2>
 
         <div className="filtros">
           {categorias.map((cat) => (
@@ -48,17 +51,37 @@ function Produtos() {
 
         <div className="blur-fundo-1"></div>
 
-        <div className="grid">
-          {produtosFiltrados
-            .filter((p) => p.estado === "disponivel")
-            .map((produto) => (
-              <ProjectCard
-                key={produto.id}
-                produto={produto}
-                onVerMais={handleOpen}
-              />
-            ))}
-        </div>
+        {disponiveis.length > 0 && (
+          <>
+            <h3 className="subtitulo">Disponíveis agora</h3>
+
+            <div className="grid">
+              {disponiveis.map((produto) => (
+                <ProjectCard
+                  key={produto.id}
+                  produto={produto}
+                  onVerMais={handleOpen}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {indisponiveis.length > 0 && (
+          <>
+            <h3 className="subtitulo vendido">Já vendidos</h3>
+
+            <div className="grid">
+              {indisponiveis.map((produto) => (
+                <ProjectCard
+                  key={produto.id}
+                  produto={produto}
+                  onVerMais={handleOpen}
+                />
+              ))}
+            </div>
+          </>
+        )}
 
         <div className="blur-fundo-2"></div>
       </section>
@@ -66,36 +89,39 @@ function Produtos() {
       {produtoSelecionado && (
         <div className="modal-overlay" onClick={handleClose}>
           <div
-              className={`modal ${closing ? "closing" : ""}`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img src={produtoSelecionado.imagem} alt="" />
+            className={`modal ${closing ? "closing" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img src={produtoSelecionado.imagem} alt="" />
 
-              <div className="modal-content">
-                <h2>{produtoSelecionado.nome}</h2>
+            <div className="modal-content">
+              <h2>{produtoSelecionado.nome}</h2>
 
-                <p><strong>Condição:</strong> {produtoSelecionado.condicao}</p>
+              <p><strong>Condição:</strong> {produtoSelecionado.condicao}</p>
 
-                <p>{produtoSelecionado.descricao}</p>
+              <p>{produtoSelecionado.descricao}</p>
 
-                <strong className="preco">
-                  R$ {produtoSelecionado.preco.toLocaleString("pt-BR")}
-                </strong>
-              </div>
-
-              <div className="modal-buttons">
-                <a
-                  href={`https://wa.me/seu-numero?text=Olá, tenho interesse no ${produtoSelecionado.nome}`}
-                  target="_blank"
-                >
-                  <button>Comprar</button>
-                </a>
-
-                <button className="outline" onClick={handleClose}>
-                  Fechar
-                </button>
-              </div>
+              <strong className="preco">
+                R$ {produtoSelecionado.preco.toLocaleString("pt-BR")}
+              </strong>
             </div>
+
+            <div className="modal-buttons">
+              {produtoSelecionado.estado === "disponivel" && (
+                <a
+                  href={produtoSelecionado.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>Ver anúncio</button>
+                </a>
+              )}
+
+              <button className="outline" onClick={handleClose}>
+                Fechar
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </>

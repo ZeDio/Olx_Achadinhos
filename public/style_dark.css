@@ -657,7 +657,7 @@ footer .logoFooter{
 
 /* Scroll */
 ::-webkit-scrollbar-thumb {
-    background: var(--cinza);
+    background: var(--roxo_claro);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--branco);
