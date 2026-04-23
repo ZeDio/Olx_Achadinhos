@@ -32,12 +32,12 @@ function Produtos() {
 
   return (
     <>
-      <section className="section-5 hidden">
+      <section className="section-5">
         <div className="blur-fundo-2"></div>
 
-        <h2>Produtos</h2>
+        <h2 className="hidden">Produtos</h2>
 
-        <div className="filtros">
+        <div className="filtros hidden">
           {categorias.map((cat) => (
             <button
               key={cat}

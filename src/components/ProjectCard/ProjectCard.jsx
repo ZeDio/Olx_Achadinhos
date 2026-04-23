@@ -22,8 +22,8 @@ function ProjectCard({ produto, onVerMais }) {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const nomeLimit = isMobile ? 18 : 21
-  const descLimit = isMobile ? 38 : 45
+  const nomeLimit = isMobile ? 17 : 21
+  const descLimit = isMobile ? 35 : 44
 
   return (
     <div className="produto-card">
