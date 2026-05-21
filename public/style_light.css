@@ -553,6 +553,12 @@ label{
 }
 
 
+/* Animação do cursor no site */
+.custom-cursor {
+    background-color: var(--roxo);
+}
+
+
 /* Botão de troca de tema */
 .tema{
     width: 50px;

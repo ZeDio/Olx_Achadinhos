@@ -8,6 +8,7 @@ import Home from './pages/Home/Home'
 import Produtos from './pages/Produtos/Produtos'
 import Contato from './pages/Contato/Contato'
 import Tema from './components/Tema/Tema'
+import Cursor from './components/Cursor/Cursor'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ScrollReveal />
       <Scroll />
 
+      <Cursor />
       <Navbar />
 
       <Routes>

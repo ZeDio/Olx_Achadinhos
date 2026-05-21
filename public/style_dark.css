@@ -556,6 +556,12 @@ label{
 }
 
 
+/* Animação do cursor no site */
+.custom-cursor {
+    background-color: var(--branco);
+}
+
+
 /* Botão de troca de tema */
 .tema{
     width: 50px;

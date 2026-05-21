@@ -27,6 +27,7 @@ import Samsung_Note_20_5g from "../assets/main/produtos/Samsung_Note_20_5g.jpg";
 import Xiaomi_Mi_12_Lite from "../assets/main/produtos/Xiaomi_Mi_12_Lite.jpg";
 import Xiaomi_Redmi_Note_7 from "../assets/main/produtos/Xiaomi_Redmi_Note_7.jpg";
 import Iphone_11_pro from "../assets/main/produtos/Iphone_11_pro.jpg";
+import Samsung_a06_4g_azul from "../assets/main/produtos/samsung_a06_4g.jpeg";
 
 export const produtos = [
   {
@@ -301,8 +302,8 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: tabs5e,
     descricao: "Tablet leve e eficiente, perfeito para estudos, entretenimento e consumo de mídia, com ótima qualidade de tela. Aparelho em excelente estado. Acompanha duas capinhas de proteção.",
-    estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/informatica/tablets-e-readers/samsung-tab-s5e-1484375961?"
+    estado: "Indisponivel",
+    link: ""
   },
   {
     id: 25,
@@ -344,6 +345,17 @@ export const produtos = [
     preco: 2000,
     condicao: "Excelente estado",
     imagem: iphone13,
+    descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
+    estado: "disponivel",
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/iphone-13-red-128gb-1496202775?"
+  },
+  {
+    id: 29,
+    categoria: "Celulares",
+    nome: "Samsung A06",
+    preco: 600,
+    condicao: "Excelente estado",
+    imagem: Samsung_a06_4g_azul,
     descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
     estado: "disponivel",
     link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/iphone-13-red-128gb-1496202775?"
