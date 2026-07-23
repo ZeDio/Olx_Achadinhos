@@ -28,6 +28,8 @@ import Xiaomi_Mi_12_Lite from "../assets/main/produtos/Xiaomi_Mi_12_Lite.jpg";
 import Xiaomi_Redmi_Note_7 from "../assets/main/produtos/Xiaomi_Redmi_Note_7.jpg";
 import Iphone_11_pro from "../assets/main/produtos/Iphone_11_pro.jpg";
 import Samsung_a06_4g_azul from "../assets/main/produtos/samsung_a06_4g.jpeg";
+import Xiaomi_Mi_11_Lite_Black from "../assets/main/produtos/Xiaomi_Mi_11_Lite_Black.webp";
+
 
 export const produtos = [
   {
@@ -291,8 +293,8 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: s21,
     descricao: "Smartphone potente com tela de alta qualidade e ótimo desempenho no dia a dia, ideal para quem busca fluidez e confiabilidade. Aparelho em excelente estado. Acompanha caixa original.",
-    estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/samsung-s21-5g-128gb-1488426120?"
+    estado: "Indisponivel",
+    link: ""
   },
   {
     id: 24,
@@ -313,8 +315,8 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: notebooklenovoideaped3,
     descricao: "Notebook com ótimo desempenho para estudos, trabalho e uso diário, equipado para multitarefas com eficiência. Aparelho em excelente estado. Acompanha carregador original e manuais.",
-    estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/informatica/notebooks/notebook-lenovo-ideapad-3-windows-11-ryzen-7-256gb-1487724071?"
+    estado: "Indisponivel",
+    link: ""
   },
   {
     id: 26,
@@ -357,7 +359,18 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: Samsung_a06_4g_azul,
     descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
+    estado: "Indisponivel",
+    link: ""
+  },
+  {
+    id: 30,
+    categoria: "Celulares",
+    nome: "Xiaomi Mi 11 Lite",
+    preco: 800,
+    condicao: "Excelente estado",
+    imagem: Xiaomi_Mi_11_Lite_Black,
+    descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
     estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/iphone-13-red-128gb-1496202775?"
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/xiaomi-mi-11-lite-black-128gb-1518175267?"
   }
 ]

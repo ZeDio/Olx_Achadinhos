@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Watch from '../../assets/main/produtos divulgacao/samsung-watch.png'
 import instagram from '../../assets/main/redes/instagram.png'
+import olx from '../../assets/main/redes/olx.svg'
 import site from '../../assets/logo/logo-roxa.svg'
 
 function Contato() {
@@ -112,6 +113,12 @@ function Contato() {
             <img src={site} alt="site" />
             <div className="text_rede">
               <h3>Web Site</h3>
+            </div>
+          </a>
+          <a href="https://www.olx.com.br/perfil/jose-diogo-da-silva-neves-de3fbaa7?origin=menu" className="rede">
+            <img src={olx} alt="OLX" />
+            <div className="text_rede">
+              <h3>OLX</h3>
             </div>
           </a>
         </div>
