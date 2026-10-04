@@ -29,7 +29,8 @@ import Xiaomi_Redmi_Note_7 from "../assets/main/produtos/Xiaomi_Redmi_Note_7.jpg
 import Iphone_11_pro from "../assets/main/produtos/Iphone_11_pro.jpg";
 import Samsung_a06_4g_azul from "../assets/main/produtos/samsung_a06_4g.jpeg";
 import Xiaomi_Mi_11_Lite_Black from "../assets/main/produtos/Xiaomi_Mi_11_Lite_Black.webp";
-
+import Xiaomi_Redmi_Note_9 from "../assets/main/produtos/Xiaomi_Redmi_Note_9.jpg";
+import Samsung_Z_Fold_5 from "../assets/main/produtos/Samsung_Z_Fold_5.jpeg";
 
 export const produtos = [
   {
@@ -278,12 +279,12 @@ export const produtos = [
     id: 22,
     categoria: "Celulares",
     nome: "Xiaomi 12",
-    preco: 1700,
+    preco: 1250,
     condicao: "Excelente estado",
     imagem: mi12,
     descricao: "Smartphone premium com alto desempenho, ideal para jogos e uso intenso, com design moderno e acabamento sofisticado. Aparelho em excelente estado de conservação. Acompanha capinha de proteção.",
     estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/xiaomi-mi-12-preto-256gb-1494727567?"
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/xiaomi-12-256gb-1536587775?"
   },
   {
     id: 23,
@@ -327,7 +328,7 @@ export const produtos = [
     imagem: motorolaonevision,
     descricao: "Smartphone com bom desempenho para uso diário, ideal para redes sociais, vídeos e tarefas do dia a dia. Aparelho em excelente estado. Acompanha carregador, caixa original com manuais e capinha transparente.",
     estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/motorola-one-vision-128gb-1488426520?"
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/motorola-one-vision-blue-edition-128gb-1539773979?"
   },
   {
     id: 27,
@@ -348,8 +349,8 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: iphone13,
     descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
-    estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/Celulareses/iphone-13-red-128gb-1496202775?"
+    estado: "Indisponivel",
+    link: ""
   },
   {
     id: 29,
@@ -370,7 +371,29 @@ export const produtos = [
     condicao: "Excelente estado",
     imagem: Xiaomi_Mi_11_Lite_Black,
     descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado. Acompanha 3 capinhas e uma película.",
+    estado: "Indisponivel",
+    link: ""
+  },
+  {
+    id: 31,
+    categoria: "Celulares",
+    nome: "Xiaomi Redmi Note 9",
+    preco: 450,
+    condicao: "Excelente estado",
+    imagem: Xiaomi_Redmi_Note_9,
+    descricao: "Smartphone de alto desempenho com excelente fluidez, câmeras de qualidade e longa vida útil, ideal para uso intensivo. Aparelho em excelente estado",
     estado: "disponivel",
-    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/xiaomi-mi-11-lite-black-128gb-1518175267?"
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/xiaomi-redmi-note-9-black-gray-edition-128gb-1539771221?"
+  },
+  {
+    id: 32,
+    categoria: "Celulares",
+    nome: "Samsung Z Fold 5",
+    preco: 2800,
+    condicao: "Excelente estado",
+    imagem: Samsung_Z_Fold_5,
+    descricao: "Samsung Galaxy Z Fold 5 em excelente estado de conservação, entregando altíssimo desempenho, telas impecáveis com fluidez incrível e câmeras de nível profissional. Perfeito para quem busca produtividade, jogos e multitarefa sem travamentos. Aparelho muito bem cuidado e funcionando perfeitamente. Acompanha 2 capinhas de proteção.",
+    estado: "disponivel",
+    link: "https://sp.olx.com.br/sao-paulo-e-regiao/celulares/z-fold-5-black-512gb-e-12gb-de-ram-1541190230?"
   }
 ]
